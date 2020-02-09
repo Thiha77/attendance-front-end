@@ -1,5 +1,5 @@
 <script>
-    import Api from '../../components/Api.svelte';
+    import Api from '../../components/util/Api.svelte';
     import { user } from '../../store.js';
 </script>
 
