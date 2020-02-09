@@ -1,8 +1,12 @@
 <script>
-    import Api from '../../components/Api.svelte'
+    import Api from '../../components/Api.svelte';
+    import { user } from '../../store.js';
 </script>
 
 <Api url="http://localhost:5000/users" method="get" let:data let:loading let:error>
+
+<h1>{$user.name}</h1>
+<button on:click={ () => { $user = { name: "something"}}}>Change</button>
 {#if data}
 <ul>
     {#each data as user}
